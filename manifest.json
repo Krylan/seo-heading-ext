@@ -1,0 +1,17 @@
+{
+  "name": "HTML Heading Checker",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Check HTML Headings on any website",
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Check HTML Headings",
+	"default_popup": "popup.html"
+  }
+}
