@@ -32,10 +32,13 @@ function getHeadings() {
 		report[0] += '<div class="report_section">H'+(index+1)+' ('+headingsCount[index]+')<ul>'+headingReport+'</ul></div>';
 	});
 	
-	let style = document.createElement("style");
-	style.innerHTML += 'h1:before, h2:before, h3:before, h4:before, h5:before, h6:before{ background-color:#F00;color:#FFF;font-size:12px;margin-top:-18px;padding:2px 4px;position: absolute;border-radius:4px;border-radius:4px;z-index: 1000;line-height: initial; }';
-	style.innerHTML += 'h1:before{ content: "H1"; }h2:before{ content: "H2"; }h3:before{ content: "H3"; }h4:before{ content: "H4"; }h5:before{ content: "H5"; }h6:before{ content: "H6"; }';
-	document.head.appendChild(style);
+	if(!document.querySelector('style#seo-heading-ext')){
+		let style = document.createElement("style");
+		style.setAttribute('id', 'seo-heading-ext');
+		style.innerText += 'h1:before, h2:before, h3:before, h4:before, h5:before, h6:before{ background-color:#F00;color:#FFF;font-size:12px;margin-top:-18px;padding:2px 4px;position: absolute;border-radius:4px;border-radius:4px;z-index: 1000;line-height: initial; }';
+		style.innerText += 'h1:before{ content: "H1"; }h2:before{ content: "H2"; }h3:before{ content: "H3"; }h4:before{ content: "H4"; }h5:before{ content: "H5"; }h6:before{ content: "H6"; }';
+		document.head.appendChild(style);
+	}
 	
 	return report;
 }
