@@ -1,6 +1,6 @@
 {
   "name": "HTML Heading Checker",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 2,
   "description": "Check HTML Headings on any website",
   "icons": {
